@@ -53,9 +53,22 @@ Developed as the final coursework for INM376 Computer Graphics at City St George
 5. Run `x64/Release/OpenGLTemplate.exe`
 
 ---
-
 ## Project Structure
 
+| File | Purpose |
+|------|---------|
+| Game.cpp / Game.h | Main game loop, rendering, input handling |
+| CatmullRom.cpp / .h | Spline generation, arc-length parameterisation, TNB frame |
+| Track.cpp / .h | Road ribbon mesh procedurally generated from spline |
+| Diamond.cpp / .h | Octagonal diamond primitive (lane markers + central gem) |
+| mainShader.vert / .frag | Phong lighting, fog, multi-texturing, storm rain/lightning |
+| diamond.vert / .frag | Phong shading for diamond primitive |
+| resources/shaders/ | All GLSL shader files |
+| resources/models/ | OBJ meshes — Car, Tree, Statue, Stone, Horse, Barrel |
+| resources/textures/ | Road, terrain and detail textures |
+| resources/audio/ | Background music (DST-Garote.mp3) |
+| resources/skyboxes/ | Skybox cubemap textures |
+| x64/Release/ | Pre-built Windows x64 executable with resources |
 
 ---
 

@@ -56,17 +56,6 @@ Developed as the final coursework for INM376 Computer Graphics at City St George
 
 ## Project Structure
 
-OpenGLTemplate/
-├── Game.cpp / Game.h — Main game loop, rendering, input
-├── CatmullRom.cpp / .h — Spline generation and TNB frame
-├── Track.cpp / .h — Road ribbon mesh from spline
-├── Diamond.cpp / .h — Octagonal diamond primitive
-├── resources/
-│ ├── shaders/ — GLSL vertex and fragment shaders
-│ ├── models/ — OBJ meshes (Car, Tree, Statue, Stone)
-│ ├── textures/ — Road, terrain, detail textures
-│ └── audio/ — Background music
-
 
 ---
 

@@ -1,0 +1,11 @@
+x64/
+OpenGLTemplate/x64/
+OpenGLTemplate/Release/
+.vs/
+*.db
+*.user
+*.suo
+*.ilk
+*.pdb
+*.iobj
+*.ipdb

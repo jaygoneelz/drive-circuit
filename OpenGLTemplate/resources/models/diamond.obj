@@ -1,0 +1,71 @@
+# diamond.obj  -  INM376 Interim Coursework
+# Octagonal cut diamond (gem) shape
+# 8-sided girdle ring at y=0, radius=1.0
+# Top apex at y=+1.5, bottom apex at y=-1.0
+# Origin: centre of girdle ring
+# 10 unique vertex positions, 16 triangular faces
+#
+mtllib diamond.mtl
+g Diamond
+
+# ---- Vertex positions (10) ----
+# Girdle ring (y=0, radius=1.0), 8 vertices at 45 degree intervals
+v  1.0000  0.0  0.0000
+v  0.7071  0.0  0.7071
+v  0.0000  0.0  1.0000
+v -0.7071  0.0  0.7071
+v -1.0000  0.0  0.0000
+v -0.7071  0.0 -0.7071
+v  0.0000  0.0 -1.0000
+v  0.7071  0.0 -0.7071
+# Apexes
+v  0.0000  1.5  0.0000
+v  0.0000 -1.0  0.0000
+
+# ---- Texture coordinates (3) ----
+vt 0.5 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+
+# ---- Vertex normals (16, one per face) ----
+# Top pyramid normals (outward-upward)
+vn -0.7866  0.5244 -0.3258
+vn -0.3258  0.5244 -0.7866
+vn  0.3258  0.5244 -0.7866
+vn  0.7866  0.5244 -0.3258
+vn  0.7866  0.5244  0.3258
+vn  0.3258  0.5244  0.7866
+vn -0.3258  0.5244  0.7866
+vn -0.7866  0.5244  0.3258
+# Bottom pyramid normals (outward-downward)
+vn  0.7866 -0.5590  0.3258
+vn  0.3258 -0.5590  0.7866
+vn -0.3258 -0.5590  0.7866
+vn -0.7866 -0.5590  0.3258
+vn -0.7866 -0.5590 -0.3258
+vn -0.3258 -0.5590 -0.7866
+vn  0.3258 -0.5590 -0.7866
+vn  0.7866 -0.5590 -0.3258
+
+# ---- Faces (v/vt/vn, CCW from outside) ----
+usemtl TopMaterial
+# Top pyramid: apex=v9, girdle CCW
+f 9/1/1  1/2/1  2/3/1
+f 9/1/2  2/2/2  3/3/2
+f 9/1/3  3/2/3  4/3/3
+f 9/1/4  4/2/4  5/3/4
+f 9/1/5  5/2/5  6/3/5
+f 9/1/6  6/2/6  7/3/6
+f 9/1/7  7/2/7  8/3/7
+f 9/1/8  8/2/8  1/3/8
+
+usemtl BottomMaterial
+# Bottom pyramid: apex=v10, girdle reversed
+f 10/1/9   2/2/9   1/3/9
+f 10/1/10  3/2/10  2/3/10
+f 10/1/11  4/2/11  3/3/11
+f 10/1/12  5/2/12  4/3/12
+f 10/1/13  6/2/13  5/3/13
+f 10/1/14  7/2/14  6/3/14
+f 10/1/15  8/2/15  7/3/15
+f 10/1/16  1/2/16  8/3/16
